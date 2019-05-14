@@ -9,8 +9,11 @@ Existing pose estimation approaches fall into two categories: single-stage and m
 The resulting method establishes the new state-of-the-art on both MS COCO and MPII Human Pose dataset, justifying the effectiveness of a multi-stage architecture.
 
 ## Results on COCO/MPII
-| Model | Dataset | Input Size | mAP | PCKh@0.5 |
-| 1-stg MSPN | COCO val | 256x192 | 71.5 | - |
+| Arch               | Input size | #Params | GFLOPs |    AP | Ap .5 | AP .75 | AP (M) | AP (L) |    AR | AR .5 | AR .75 | AR (M) | AR (L) |
+|--------------------|------------|---------|--------|-------|-------|--------|--------|--------|-------|-------|--------|--------|--------|
+| pose_resnet_50     |    256x192 | 34.0M   |    8.9 | 0.704 | 0.886 |  0.783 |  0.671 |  0.772 | 0.763 | 0.929 |  0.834 |  0.721 |  0.824 |
+| pose_resnet_50     |    384x288 | 34.0M   |   20.0 | 0.722 | 0.893 |  0.789 |  0.681 |  0.797 | 0.776 | 0.932 |  0.838 |  0.728 |  0.846 |
+| pose_resnet_101    |    256x192 | 53.0M   |   12.4 | 0.714 | 0.893 |  0.793 |  0.681 |  0.781 | 0.771 | 0.934 |  0.840 |  0.730 |  0.832 |
 
 #### Note
 * \* means using external data
