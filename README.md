@@ -11,7 +11,7 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 ## Results
 
 ### COCO
-| Model | Dataset | Input Size | mAP | PCKh@0.5 |
+| Model | Dataset | Input Size | PCKh@0.5 |
 | :-----------------: | :------------------: | :-----------: | :------: |
 | 1-stg MSPN | COCO val | 256x192 | 71.5 |
 | 2-stg MSPN | COCO val | 256x192 | 74.5 |
