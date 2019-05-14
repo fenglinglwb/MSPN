@@ -15,11 +15,11 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 | 3-stg MSPN | COCO val | 256x192 | 75.2 | - |
 | 4-stg MSPN | COCO val | 256x192 | 75.9 | - |
 | 4-stg MSPN | COCO test-dev | 384x288 | 76.1 | - |
-| 4-stg MSPN<sup>*</sup> | COCO test-dev | 384x288 | 77.1 | - |
-| 4-stg MSPN<sup>+*</sup> | COCO test-dev | 384x288 | 78.1 | - |
-| 4-stg MSPN<sup>+*</sup> | COCO test-challenge | 384x288 | 76.4 | - |
+| 4-stg MSPN<sup>\*</sup> | COCO test-dev | 384x288 | 77.1 | - |
+| 4-stg MSPN<sup>\+\*</sup> | COCO test-dev | 384x288 | 78.1 | - |
+| 4-stg MSPN<sup>\+\*</sup> | COCO test-challenge | 384x288 | 76.4 | - |
 | 4-stg MSPN | MPII val | 256x256 | - | 91.2 |
-| 4-stg MSPN<sup>#</sup> | MPII test | 256x256 | - | 92.6 |
+| 4-stg MSPN<sup>\#</sup> | MPII test | 256x256 | - | 92.6 |
 
 #### Note
 * \* means using external data
