@@ -7,6 +7,8 @@ This is a pytorch realization of MSPN proposed in [ Rethinking on Multi-Stage Ne
 Existing pose estimation approaches fall into two categories: single-stage and multi-stage methods. While multistage methods are seemingly more suited for the task, their performance in current practice is not as good as singlestage methods. This work studies this issue. We argue that the current multi-stage methods’ unsatisfactory performance comes from the insufficiency in various design choices. We propose several improvements, including the single-stage module design, cross stage feature aggregation, and coarse-tofine supervision. 
 
 The resulting method establishes the new state-of-the-art on both MS COCO and MPII Human Pose dataset, justifying the effectiveness of a multi-stage architecture.
+
+## Results on COCO/MPII
 | Model | Dataset | Input Size | mAP | PCKh@0.5 |
 | :--: | :--: | :--: | :--: | :--: | :--: |
 | 1-stg MSPN | COCO val | 256x192 | 71.5 | - |
