@@ -8,18 +8,25 @@ Existing pose estimation approaches fall into two categories: single-stage and m
 
 The resulting method establishes the new state-of-the-art on both MS COCO and MPII Human Pose dataset, justifying the effectiveness of a multi-stage architecture.
 
+## Results
+
+### COCO
 | Model | Dataset | Input Size | mAP | PCKh@0.5 |
-| :-----------------: | :------------------: | :-----------: | :------: | :------: |
-| 1-stg MSPN | COCO val | 256x192 | 71.5 | - |
-| 2-stg MSPN | COCO val | 256x192 | 74.5 | - |
-| 3-stg MSPN | COCO val | 256x192 | 75.2 | - |
-| 4-stg MSPN | COCO val | 256x192 | 75.9 | - |
-| 4-stg MSPN | COCO test-dev | 384x288 | 76.1 | - |
-| 4-stg MSPN<sup>\*</sup> | COCO test-dev | 384x288 | 77.1 | - |
-| 4-stg MSPN<sup>\+\*</sup> | COCO test-dev | 384x288 | 78.1 | - |
-| 4-stg MSPN<sup>\+\*</sup> | COCO test-challenge | 384x288 | 76.4 | - |
-| 4-stg MSPN | MPII val | 256x256 | - | 91.2 |
-| 4-stg MSPN<sup>\#</sup> | MPII test | 256x256 | - | 92.6 |
+| :-----------------: | :------------------: | :-----------: | :------: |
+| 1-stg MSPN | COCO val | 256x192 | 71.5 |
+| 2-stg MSPN | COCO val | 256x192 | 74.5 |
+| 3-stg MSPN | COCO val | 256x192 | 75.2 |
+| 4-stg MSPN | COCO val | 256x192 | 75.9 |
+| 4-stg MSPN | COCO test-dev | 384x288 | 76.1 |
+| 4-stg MSPN<sup>\*</sup> | COCO test-dev | 384x288 | 77.1 |
+| 4-stg MSPN<sup>\+\*</sup> | COCO test-dev | 384x288 | 78.1 |
+| 4-stg MSPN<sup>\+\*</sup> | COCO test-challenge | 384x288 | 76.4 |
+
+### MPII
+| Model | Dataset | Input Size | PCKh@0.5 |
+| :-----------------: | :------------------: | :-----------: | :------: |
+| 4-stg MSPN | MPII val | 256x256 | 91.2 |
+| 4-stg MSPN<sup>\#</sup> | MPII test | 256x256 | 92.6 |
 
 #### Note
 * \* means using external data
@@ -30,7 +37,7 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 
 ### Installation
 
-1. Install Pytorch refering to [official web][2].
+1. Install Pytorch refering to [Pytorch website][2].
 
 2. Clone this repo, and config MSPN_HOME in '/etc/profile' or '~/.bashrc', e.g.
  ```
@@ -45,9 +52,9 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 
 4. Install COCOAPI
  ```
- git clone https://github.com/cocodataset/cocoapi.git $MSPN_HOME/lib/COCOAP
+ git clone https://github.com/cocodataset/cocoapi.git $MSPN_HOME/lib/COCOAPI
  cd $MSPN_HOME/lib/COCOAPI/PythonAPI
- python3 setup.py install --user
+ make install
  ```
  
 ### Dataset
