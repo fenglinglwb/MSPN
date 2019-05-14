@@ -9,7 +9,7 @@ Existing pose estimation approaches fall into two categories: single-stage and m
 The resulting method establishes the new state-of-the-art on both MS COCO and MPII Human Pose dataset, justifying the effectiveness of a multi-stage architecture.
 
 | Model | Dataset | Input Size | mAP | PCKh@0.5 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
+| :--: | :--: | :--: | :--: | :--: | :--: |
 | 1-stg MSPN | COCO val | 256x192 | 71.5 | - |
 | 2-stg MSPN | COCO val | 256x192 | 74.5 | - |
 | 3-stg MSPN | COCO val | 256x192 | 75.2 | - |
@@ -20,6 +20,7 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 | 4-stg MSPN<sup>+*</sup> | COCO test-challenge | 384x288 | 76.4 | - |
 | 4-stg MSPN | MPII val | 256x256 | - | 91.2 |
 | 4-stg MSPN<sup>#</sup> | MPII test | 256x256 | - | 92.6 |
+
 #### Note
 * \* means using external data
 * \+ means using model ensemble
@@ -75,7 +76,7 @@ python -m torch.distributed.launch --nproc_per_node=gpu_num test.py -i iter_num
 ```
 the ***gpu_num*** is the number of gpus you want to use, and ***iter_num*** is the specified iteration model.
 
-### Citation
+## Citation
 Please cite
 ```
 @article{li2019rethinking,
