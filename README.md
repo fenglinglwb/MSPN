@@ -37,9 +37,9 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 
 ### Installation
 
-1. Install Pytorch refering to [Pytorch website][2].
+1. Install Pytorch referring to [Pytorch website][2].
 
-2. Clone this repo, and config MSPN_HOME in '/etc/profile' or '~/.bashrc', e.g.
+2. Clone this repo, and config MSPN_HOME in **/etc/profile** or **~/.bashrc**, e.g.
  ```
  export MSPN_HOME='root of your cloned repo'
  export PYTHONPATH=$PYTHONPATH:$MSPN_HOME
@@ -50,7 +50,7 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
  pip3 install -r requirements.txt
  ```
 
-4. Install COCOAPI
+4. Install COCOAPI referring to [cocoapi website][3]
  ```
  git clone https://github.com/cocodataset/cocoapi.git $MSPN_HOME/lib/COCOAPI
  cd $MSPN_HOME/lib/COCOAPI/PythonAPI
@@ -60,10 +60,10 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 ### Dataset
 
 ##### COCO
-Download images from [COCO website][3] and put train2017/val2017 splits to **$MSPN_HOME/dataset/COCO/images/**
+Download images from [COCO website][4] and put train2017/val2017 splits to **$MSPN_HOME/dataset/COCO/images/**
 
 ##### MPII
-Download images from [MPII website][4] and put all images into **$MSPN_HOME/dataset/MPII/images/**
+Download images from [MPII website][5] and put all images into **$MSPN_HOME/dataset/MPII/images/**
 
 ### Train
 Go to specified experiment repository, e.g.
@@ -96,7 +96,8 @@ Please cite
 
 [1]: https://arxiv.org/abs/1901.00148
 [2]: https://pytorch.org/
-[3]: http://cocodataset.org/#download
-[4]: http://human-pose.mpi-inf.mpg.de/
+[3]: https://github.com/cocodataset/cocoapi
+[4]: http://cocodataset.org/#download
+[5]: http://human-pose.mpi-inf.mpg.de/
 
 
