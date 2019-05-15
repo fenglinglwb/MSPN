@@ -99,17 +99,17 @@ $MSPN_HOME
 
 1. Download images from [COCO website][4], and put train2014/val2014 splits into **$MSPN_HOME/dataset/COCO/images/** respectively.
 
-2. Download ground truth from [Google Drive][6], and put it into **$MSPN_HOME/dataset/COCO/gt_json/** respectively.
+2. Download ground truth from [Google Drive][6], and put it into **$MSPN_HOME/dataset/COCO/gt_json/**.
 
-3. Download detection result from [Google Drive][6], and put it into **$MSPN_HOME/dataset/COCO/det_json/** respectively.
+3. Download detection result from [Google Drive][6], and put it into **$MSPN_HOME/dataset/COCO/det_json/**.
 
 #### MPII
 
 1. Download images from [MPII website][5], and put images into **$MSPN_HOME/dataset/MPII/images/**.
 
-2. Download ground truth from [Google Drive][6], and put it into **$MSPN_HOME/dataset/MPII/gt_json/** respectively.
+2. Download ground truth from [Google Drive][6], and put it into **$MSPN_HOME/dataset/MPII/gt_json/**.
 
-3. Download detection result from [Google Drive][6], and put it into **$MSPN_HOME/dataset/MPII/det_json/** respectively.
+3. Download detection result from [Google Drive][6], and put it into **$MSPN_HOME/dataset/MPII/det_json/**.
 
 ### Model
 Download ImageNet pretained ResNet-50 model from [Google Drive][6], and put it into **$MSPN_HOME/lib/models/**. For your convenience, We also provide a well-trained 2-stage MSPN model for COCO.
