@@ -99,16 +99,26 @@ $MSPN_HOME
 
 1. Download images from [COCO website][4], and put train2014/val2014 splits into **$MSPN_HOME/dataset/COCO/images/** respectively.
 
-2. Download ground truth and detection result from --, and put them into **$MSPN_HOME/dataset/COCO/** respectively.
+2. Download ground truth from [Google Drive][6], and put it into **$MSPN_HOME/dataset/COCO/gt_json/** respectively.
+
+3. Download detection result from [Google Drive][6], and put it into **$MSPN_HOME/dataset/COCO/det_json/** respectively.
 
 #### MPII
 
 1. Download images from [MPII website][5], and put images into **$MSPN_HOME/dataset/MPII/images/**.
 
-2. Download ground truth and detection result from --, and put them into **$MSPN_HOME/dataset/MPII/** respectively.
+2. Download ground truth from [Google Drive][6], and put it into **$MSPN_HOME/dataset/MPII/gt_json/** respectively.
+
+3. Download detection result from [Google Drive][6], and put it into **$MSPN_HOME/dataset/MPII/det_json/** respectively.
 
 ### Model
-Download ImageNet pretained ResNet-50 model from --, and put it into **$MSPN_HOME/lib/models/**. For your convenience, We also provide a well-trained 2-stage MSPN model for COCO.
+Download ImageNet pretained ResNet-50 model from [Google Drive][6], and put it into **$MSPN_HOME/lib/models/**. For your convenience, We also provide a well-trained 2-stage MSPN model for COCO.
+
+### Log
+Create a directory to save logs and models:
+```
+mkdir $MSPN_HOME/model_logs
+```
 
 ### Train
 Go to specified experiment repository, e.g.
@@ -144,5 +154,6 @@ Please considering citing this project in your publications if it helps your res
 [3]: https://github.com/cocodataset/cocoapi
 [4]: http://cocodataset.org/#download
 [5]: http://human-pose.mpi-inf.mpg.de/
+[6]: https://drive.google.com/open?id=1MW27OY_4YetEZ4JiD4PltFGL_1-caECy
 
 
