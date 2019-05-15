@@ -3,12 +3,14 @@
 
 ## Introduction
 This is a pytorch realization of MSPN proposed in [ Rethinking on Multi-Stage Networks for Human Pose Estimation ][1]. In this work, we design an effective network MSPN to perform human pose estimation problem.
+----
 
 Existing pose estimation approaches fall into two categories: single-stage and multi-stage methods. While multistage methods are seemingly more suited for the task, their performance in current practice is not as good as singlestage methods. This work studies this issue. We argue that the current multi-stage methods’ unsatisfactory performance comes from the insufficiency in various design choices. We propose several improvements, including the single-stage module design, cross stage feature aggregation, and coarse-tofine supervision. 
 
 The resulting method establishes the new state-of-the-art on both MS COCO and MPII Human Pose dataset, justifying the effectiveness of a multi-stage architecture.
 
 ## Results
+----
 
 ### COCO
 | Model | Dataset | Input Size | PCKh@0.5 |
@@ -33,7 +35,43 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 * \+ means using model ensemble
 * \# means using multi-shift test
 
+## Repo Structure
+----
+This repo is organized as following:
+```
+$MSPN_HOME
+|-- cvpack
+|
+|-- dataset
+|   |-- COCO
+|   |   |-- det_json
+|   |   |-- gt_json
+|   |   |-- images
+|   |       |-- train2014
+|   |       |-- val2014
+|   |
+|   |-- MPII
+|       |-- det_json
+|       |-- gt_json
+|       |-- images
+|   
+|-- lib
+|   |-- models
+|   |-- utils
+|
+|-- exps
+|   |-- exp1
+|   |-- exp2
+|   |-- ...
+|
+|-- model_logs
+|
+|-- README.md
+|-- requirements.txt
+```
+
 ## Quick Start
+----
 
 ### Installation
 
@@ -41,7 +79,7 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 
 2. Clone this repo, and config MSPN_HOME in **/etc/profile** or **~/.bashrc**, e.g.
  ```
- export MSPN_HOME='root of your cloned repo'
+ export MSPN_HOME='/path/of/your/cloned/repo'
  export PYTHONPATH=$PYTHONPATH:$MSPN_HOME
  ```
 
@@ -50,7 +88,7 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
  pip3 install -r requirements.txt
  ```
 
-4. Install COCOAPI referring to [cocoapi website][3]
+4. Install COCOAPI referring to [cocoapi website][3]:
  ```
  git clone https://github.com/cocodataset/cocoapi.git $MSPN_HOME/lib/COCOAPI
  cd $MSPN_HOME/lib/COCOAPI/PythonAPI
@@ -59,11 +97,11 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
  
 ### Dataset
 
-##### COCO
-Download images from [COCO website][4] and put train2017/val2017 splits to **$MSPN_HOME/dataset/COCO/images/**
+#### COCO
+Download images from [COCO website][4], and put train2014/val2014 splits to **$MSPN_HOME/dataset/COCO/images/** respectively.
 
-##### MPII
-Download images from [MPII website][5] and put all images into **$MSPN_HOME/dataset/MPII/images/**
+#### MPII
+Download images from [MPII website][5], and put all images into **$MSPN_HOME/dataset/MPII/images/**.
 
 ### Train
 Go to specified experiment repository, e.g.
@@ -81,10 +119,11 @@ the ***gpu_num*** is the number of gpus you want to use.
 ```
 python -m torch.distributed.launch --nproc_per_node=gpu_num test.py -i iter_num
 ```
-the ***gpu_num*** is the number of gpus you want to use, and ***iter_num*** is the specified iteration model.
+the ***gpu_num*** is the number of gpus you want to use, and ***iter_num*** is the specified iteration number you want to test.
 
 ## Citation
-Please cite
+----
+Please cite this project in your publications if it helps your research.
 ```
 @article{li2019rethinking,
   title={Rethinking on Multi-Stage Networks for Human Pose Estimation},
