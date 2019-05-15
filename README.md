@@ -73,18 +73,18 @@ $MSPN_HOME
 
 1. Install Pytorch referring to [Pytorch website][2].
 
-2. Clone this repo, and config MSPN_HOME in **/etc/profile** or **~/.bashrc**, e.g.
+2. Clone this repo, and config **MSPN_HOME** in **/etc/profile** or **~/.bashrc**, e.g.
  ```
  export MSPN_HOME='/path/of/your/cloned/repo'
  export PYTHONPATH=$PYTHONPATH:$MSPN_HOME
  ```
 
-3. Install requirements.
+3. Install requirements:
  ```
  pip3 install -r requirements.txt
  ```
 
-4. Install COCOAPI referring to [cocoapi website][3]:
+4. Install COCOAPI referring to [cocoapi website][3], or:
  ```
  git clone https://github.com/cocodataset/cocoapi.git $MSPN_HOME/lib/COCOAPI
  cd $MSPN_HOME/lib/COCOAPI/PythonAPI
@@ -97,28 +97,28 @@ $MSPN_HOME
 Download images from [COCO website][4], and put train2014/val2014 splits to **$MSPN_HOME/dataset/COCO/images/** respectively.
 
 #### MPII
-Download images from [MPII website][5], and put all images into **$MSPN_HOME/dataset/MPII/images/**.
+Download images from [MPII website][5], and put images into **$MSPN_HOME/dataset/MPII/images/**.
 
 ### Train
 Go to specified experiment repository, e.g.
 ```
 cd $MSPN_HOME/exps/mspn.2xstg.coco
 ```
-and run
+and run:
 ```
 python config.py -log
 python -m torch.distributed.launch --nproc_per_node=gpu_num train.py
 ```
-the ***gpu_num*** is the number of gpus you want to use.
+the ***gpu_num*** is the number of gpus.
 
 ### Test
 ```
 python -m torch.distributed.launch --nproc_per_node=gpu_num test.py -i iter_num
 ```
-the ***gpu_num*** is the number of gpus you want to use, and ***iter_num*** is the specified iteration number you want to test.
+the ***gpu_num*** is the number of gpus, and ***iter_num*** is the iteration number you want to test.
 
 ## Citation
-Please cite this project in your publications if it helps your research.
+Please considering citing this project in your publications if it helps your research.
 ```
 @article{li2019rethinking,
   title={Rethinking on Multi-Stage Networks for Human Pose Estimation},
