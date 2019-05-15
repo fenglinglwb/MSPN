@@ -3,14 +3,12 @@
 
 ## Introduction
 This is a pytorch realization of MSPN proposed in [ Rethinking on Multi-Stage Networks for Human Pose Estimation ][1]. In this work, we design an effective network MSPN to perform human pose estimation problem.
-----
 
 Existing pose estimation approaches fall into two categories: single-stage and multi-stage methods. While multistage methods are seemingly more suited for the task, their performance in current practice is not as good as singlestage methods. This work studies this issue. We argue that the current multi-stage methods’ unsatisfactory performance comes from the insufficiency in various design choices. We propose several improvements, including the single-stage module design, cross stage feature aggregation, and coarse-tofine supervision. 
 
 The resulting method establishes the new state-of-the-art on both MS COCO and MPII Human Pose dataset, justifying the effectiveness of a multi-stage architecture.
 
 ## Results
-----
 
 ### COCO
 | Model | Dataset | Input Size | PCKh@0.5 |
@@ -36,7 +34,6 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 * \# means using multi-shift test
 
 ## Repo Structure
-----
 This repo is organized as following:
 ```
 $MSPN_HOME
@@ -71,7 +68,6 @@ $MSPN_HOME
 ```
 
 ## Quick Start
-----
 
 ### Installation
 
@@ -122,7 +118,6 @@ python -m torch.distributed.launch --nproc_per_node=gpu_num test.py -i iter_num
 the ***gpu_num*** is the number of gpus you want to use, and ***iter_num*** is the specified iteration number you want to test.
 
 ## Citation
-----
 Please cite this project in your publications if it helps your research.
 ```
 @article{li2019rethinking,
