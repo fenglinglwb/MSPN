@@ -2,9 +2,10 @@
 ----
 
 ## Introduction
-This is a pytorch realization of MSPN proposed in [ Rethinking on Multi-Stage Networks for Human Pose Estimation ][1]. In this work, we design an effective network MSPN to perform human pose estimation problem.
+This is a pytorch realization of MSPN proposed in [ Rethinking on Multi-Stage Networks for Human Pose Estimation ][1]. In this work, we design an effective network MSPN to fulfill human pose estimation task.
 
 Existing pose estimation approaches fall into two categories: single-stage and multi-stage methods. While multistage methods are seemingly more suited for the task, their performance in current practice is not as good as singlestage methods. This work studies this issue. We argue that the current multi-stage methods’ unsatisfactory performance comes from the insufficiency in various design choices. We propose several improvements, including the single-stage module design, cross stage feature aggregation, and coarse-tofine supervision. 
+![Overview of MSPN.](/figures/MSPN.pdf)
 
 The resulting method establishes the new state-of-the-art on both MS COCO and MPII Human Pose dataset, justifying the effectiveness of a multi-stage architecture.
 
@@ -25,13 +26,13 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 ### MPII
 | Model | Dataset | Input Size | PCKh@0.5 |
 | :-----------------: | :------------------: | :-----------: | :------: |
-| 4-stg MSPN | MPII val | 256x256 | 91.2 |
+| 4-stg MSPN | MPII val | 256x256 | 91.1 |
 | 4-stg MSPN<sup>\#</sup> | MPII test | 256x256 | 92.6 |
 
 #### Note
-* \* means using external data
-* \+ means using model ensemble
-* \# means using multi-shift test
+* \* means using external data.
+* \+ means using model ensemble.
+* \# means using multi-shift test.
 
 ## Repo Structure
 This repo is organized as following:
@@ -94,7 +95,7 @@ $MSPN_HOME
 ### Dataset
 
 #### COCO
-Download images from [COCO website][4], and put train2014/val2014 splits to **$MSPN_HOME/dataset/COCO/images/** respectively.
+Download images from [COCO website][4], and put train2014/val2014 splits into **$MSPN_HOME/dataset/COCO/images/** respectively.
 
 #### MPII
 Download images from [MPII website][5], and put images into **$MSPN_HOME/dataset/MPII/images/**.
