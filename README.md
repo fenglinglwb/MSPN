@@ -96,10 +96,19 @@ $MSPN_HOME
 ### Dataset
 
 #### COCO
-Download images from [COCO website][4], and put train2014/val2014 splits into **$MSPN_HOME/dataset/COCO/images/** respectively.
+
+1. Download images from [COCO website][4], and put train2014/val2014 splits into **$MSPN_HOME/dataset/COCO/images/** respectively.
+
+2. Download ground truth and detection result from --, and put them into **$MSPN_HOME/dataset/COCO/** respectively.
 
 #### MPII
-Download images from [MPII website][5], and put images into **$MSPN_HOME/dataset/MPII/images/**.
+
+1. Download images from [MPII website][5], and put images into **$MSPN_HOME/dataset/MPII/images/**.
+
+2. Download ground truth and detection result from --, and put them into **$MSPN_HOME/dataset/MPII/** respectively.
+
+### Model
+Download ImageNet pretained ResNet-50 model from --, and put it into **$MSPN_HOME/lib/models/**. For your convenience, We also provide a well-trained 2-stage MSPN model for COCO.
 
 ### Train
 Go to specified experiment repository, e.g.
