@@ -13,6 +13,7 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 ## Results
 
 ### COCO
+
 #### COCO val
 | Model | Dataset | Input Size | mAP |
 | :-----------------: | :------------------: | :-----------: | :------: |
