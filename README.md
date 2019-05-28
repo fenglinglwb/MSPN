@@ -13,16 +13,22 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 ## Results
 
 ### COCO
+#### COCO val
 | Model | Dataset | Input Size | mAP |
 | :-----------------: | :------------------: | :-----------: | :------: |
 | 1-stg MSPN | COCO val | 256x192 | 71.5 |
 | 2-stg MSPN | COCO val | 256x192 | 74.5 |
 | 3-stg MSPN | COCO val | 256x192 | 75.2 |
 | 4-stg MSPN | COCO val | 256x192 | 75.9 |
+| 4-stg MSPN<sup>\*</sup> | COCO val | 384x288 | 79.0 |
+| 4-stg MSPN<sup>\+\*</sup> | COCO val | 384x288 | 80.0 |
+
+#### COCO test-dev
+| Model | Dataset | Input Size | mAP |
+| :-----------------: | :------------------: | :-----------: | :------: |
 | 4-stg MSPN | COCO test-dev | 384x288 | 76.1 |
 | 4-stg MSPN<sup>\*</sup> | COCO test-dev | 384x288 | 77.1 |
 | 4-stg MSPN<sup>\+\*</sup> | COCO test-dev | 384x288 | 78.1 |
-| 4-stg MSPN<sup>\+\*</sup> | COCO test-challenge | 384x288 | 76.4 |
 
 ### MPII
 | Model | Dataset | Input Size | PCKh@0.5 |
