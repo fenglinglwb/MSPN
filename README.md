@@ -1,5 +1,6 @@
 # Rethinking on Multi-Stage Networks for Human Pose Estimation
-----
+
+This repo is also linked to [github][9].
 
 ## Introduction
 This is a pytorch realization of MSPN proposed in [ Rethinking on Multi-Stage Networks for Human Pose Estimation ][1]. In this work, we design an effective network MSPN to fulfill human pose estimation task.
@@ -12,30 +13,28 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 
 ## Results
 
-### COCO
+### Results on COCO val dataset
+| Model | Input Size | AP | AP<sup>50</sup> | AP<sup>75</sup> | AP<sup>M</sup> | AP<sup>L</sup> | AR | AR<sup>50</sup> | AR<sup>75</sup> | AR<sup>M</sup> | AR<sup>L</sup> |
+| :-----------------: | :-----------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
+| 1-stg MSPN | 256x192 | 71.5 | 90.1 | 78.4 | 67.4 | 77.5 | 77.0 | 93.2 | 83.1 | 72.6 | 83.1 |
+| 2-stg MSPN | 256x192 | 74.5 | 91.2 | 81.2 | 70.5 | 80.4 | 79.7 | 94.2 | 85.6 | 75.4 | 85.7 |
+| 3-stg MSPN | 256x192 | 75.2 | 91.5 | 82.2 | 71.1 | 81.1 | 80.3 | 94.3 | 86.4 | 76.0 | 86.4 |
+| 4-stg MSPN | 256x192 | 75.9 | 91.8 | 82.9 | 72.0 | 81.6 | 81.1 | 94.9 | 87.1 | 76.9 | 87.0 |
+| 4-stg MSPN<sup>\*</sup> | 384x288 | 78.8 | 93.1 | 85.6 | 74.9 | 84.7 | 83.8 | 95.9 | 89.5 | 79.7 | 89.6 |
+| 4-stg MSPN<sup>\+\*</sup> | 384x288 | 79.8 | 93.4 | 86.1 | 75.9 | 85.6 | 84.3 | 96.0 | 89.7 | 80.2 | 90.0 |
 
-#### COCO val
-| Model | Dataset | Input Size | mAP |
-| :-----------------: | :------------------: | :-----------: | :------: |
-| 1-stg MSPN | COCO val | 256x192 | 71.5 |
-| 2-stg MSPN | COCO val | 256x192 | 74.5 |
-| 3-stg MSPN | COCO val | 256x192 | 75.2 |
-| 4-stg MSPN | COCO val | 256x192 | 75.9 |
-| 4-stg MSPN<sup>\*</sup> | COCO val | 384x288 | 79.0 |
-| 4-stg MSPN<sup>\+\*</sup> | COCO val | 384x288 | 80.0 |
+### Results on COCO test-dev dataset
+| Model | Input Size | AP | AP<sup>50</sup> | AP<sup>75</sup> | AP<sup>M</sup> | AP<sup>L</sup> | AR | AR<sup>50</sup> | AR<sup>75</sup> | AR<sup>M</sup> | AR<sup>L</sup> |
+| :-----------------: | :-----------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
+| 4-stg MSPN | 384x288 | 76.1 | 93.4 | 83.8 | 72.3 | 81.5 | 81.6 | 96.3 | 88.1 | 77.5 | 87.1 |
+| 4-stg MSPN<sup>\*</sup> | 384x288 | 77.1 | 93.8 | 84.6 | 73.4 | 82.3 | 82.3 | 96.5 | 88.9 | 78.4 | 87.7 |
+| 4-stg MSPN<sup>\+\*</sup> | 384x288 | 78.1 | 94.1 | 85.9 | 74.5 | 83.3 | 83.1 | 96.7 | 89.8 | 79.3 | 88.2 |
 
-#### COCO test-dev
-| Model | Dataset | Input Size | mAP |
-| :-----------------: | :------------------: | :-----------: | :------: |
-| 4-stg MSPN | COCO test-dev | 384x288 | 76.1 |
-| 4-stg MSPN<sup>\*</sup> | COCO test-dev | 384x288 | 77.1 |
-| 4-stg MSPN<sup>\+\*</sup> | COCO test-dev | 384x288 | 78.1 |
-
-### MPII
-| Model | Dataset | Input Size | PCKh@0.5 |
-| :-----------------: | :------------------: | :-----------: | :------: |
-| 4-stg MSPN | MPII val | 256x256 | 91.1 |
-| 4-stg MSPN<sup>\#</sup> | MPII test | 256x256 | 92.6 |
+### Results on MPII dataset
+| Model | Split | Input Size | Head | Shoulder | Elbow | Wrist | Hip | Knee | Ankle | Mean |
+| :-----------------: | :------------------: | :-----------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
+| 4-stg MSPN | val | 256x256 | 96.8 | 96.5 | 92.0 | 87.0 | 89.9 | 88.0 | 84.0 | 91.1 |
+| 4-stg MSPN<sup>\#</sup> | test | 256x256 | 98.4 | 97.1 | 93.2 | 89.2 | 92.0 | 90.1 | 85.5 | 92.6 |
 
 #### Note
 * \* means using external data.
@@ -146,7 +145,7 @@ python -m torch.distributed.launch --nproc_per_node=gpu_num test.py -i iter_num
 the ***gpu_num*** is the number of gpus, and ***iter_num*** is the iteration number you want to test.
 
 ## Citation
-Please considering citing this project in your publications if it helps your research.
+Please considering citing our projects in your publications if they help your research.
 ```
 @article{li2019rethinking,
   title={Rethinking on Multi-Stage Networks for Human Pose Estimation},
@@ -154,7 +153,19 @@ Please considering citing this project in your publications if it helps your res
   journal={arXiv preprint arXiv:1901.00148},
   year={2019}
 }
+
+@inproceedings{chen2018cascaded,
+  title={Cascaded pyramid network for multi-person pose estimation},
+  author={Chen, Yilun and Wang, Zhicheng and Peng, Yuxiang and Zhang, Zhiqiang and Yu, Gang and Sun, Jian},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={7103--7112},
+  year={2018}
+}
 ```
+And the [code][7] of [Cascaded Pyramid Network][8] is also available. 
+
+## Contact
+You can contact us by email published in our [paper][1] or fenglinglwb@gmail.com.
 
 [1]: https://arxiv.org/abs/1901.00148
 [2]: https://pytorch.org/
@@ -162,5 +173,7 @@ Please considering citing this project in your publications if it helps your res
 [4]: http://cocodataset.org/#download
 [5]: http://human-pose.mpi-inf.mpg.de/
 [6]: https://drive.google.com/open?id=1MW27OY_4YetEZ4JiD4PltFGL_1-caECy
-
+[7]: https://github.com/chenyilun95/tf-cpn
+[8]: https://arxiv.org/abs/1711.07319
+[9]: https://github.com/fenglinglwb/MSPN
 
