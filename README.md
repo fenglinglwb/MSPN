@@ -21,8 +21,6 @@ The resulting method establishes the new state-of-the-art on both MS COCO and MP
 | 3-stg MSPN | 256x192 | 75.2 | 91.5 | 82.2 | 71.1 | 81.1 | 80.3 | 94.3 | 86.4 | 76.0 | 86.4 |
 | 4-stg MSPN | 256x192 | 75.9 | 91.8 | 82.9 | 72.0 | 81.6 | 81.1 | 94.9 | 87.1 | 76.9 | 87.0 |
 | 4-stg MSPN | 384x288 | 76.9 | 91.8 | 83.2 | 72.7 | 83.1 | 81.8 | 94.8 | 87.3 | 77.4 | 87.8 |
-| 4-stg MSPN<sup>\*</sup> | 384x288 | 78.8 | 93.1 | 85.6 | 74.9 | 84.7 | 83.8 | 95.9 | 89.5 | 79.7 | 89.6 |
-| 4-stg MSPN<sup>\+\*</sup> | 384x288 | 79.8 | 93.4 | 86.1 | 75.9 | 85.6 | 84.3 | 96.0 | 89.7 | 80.2 | 90.0 |
 
 ### Results on COCO test-dev dataset
 | Model | Input Size | AP | AP<sup>50</sup> | AP<sup>75</sup> | AP<sup>M</sup> | AP<sup>L</sup> | AR | AR<sup>50</sup> | AR<sup>75</sup> | AR<sup>M</sup> | AR<sup>L</sup> |
